@@ -30,6 +30,8 @@ Ve složce s projektem spustě soubor "main.py" pomocí příkazu:
 python main.py
 ```
 
+Uživatelsky přívětivější spuštění je pomocí .exe souboru. Soubor lze nalézt v /src/dist/project_builder_cli.exe
+
 ## Konfigurace
 
 Není potřeba žádná konfigurace.

@@ -27,6 +27,7 @@ Run "main.py" script in the console. Must be in the project folder. :
 ```bash
 python main.py
 ```
+A more user-friendly way to run it is with an .exe file. The file can be found in /src/dist/project_builder_cli.exe
 
 ## Configuration
 
