@@ -42,7 +42,11 @@ MAJOR.MINOR.PATCH
 
 ## Version History
 
-
+## [1.0.3] – 24.06.2025
+### Fistr functional exe file
+- The executable *project_builder_cli.exe* has been built.
+- First tests completed
+- Better console logs
 
 ## [1.0.2] – 24.06.2025
 ### Created builder for .exe
