@@ -42,13 +42,18 @@ MAJOR.MINOR.PATCH
 
 ## Version History
 
-## [1.0.0] – 24.06.2025
-### Initial project
-- Initial project skeleton created  
-- Added: `README.md`, `LICENSE`, `requirements.txt`, and `docs/` folder
 
+
+## [1.0.2] – 24.06.2025
+### Created builder for .exe
+- Created: ./src/app/build.py for building exe file
+- Recreated structuro for project src, app, gui folders
 
 ## [1.0.1] – 24.06.2025
 ### Created tpl templates for automatic generated files
 - Created: templates for `LICENSE`, `README`, `CHANGELOG`, `requirements` in cs/en and 'root' dir
-```
+
+## [1.0.0] – 24.06.2025
+### Initial project
+- Initial project skeleton created  
+- Added: `README.md`, `LICENSE`, `requirements.txt`, and `docs/` folder
