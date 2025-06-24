@@ -6,6 +6,11 @@ This documentation is available in multiple languages. / Tato dokumentace je dos
 - [Čeština](docs/cs/README.md)
 
 ---
+## Executables / Spustitelný soubor
+OS Windows
+- [project_builder_cli](/src/dist/project_builder_cli.exe)  
+
+---
 
 ## License / Licence
 
