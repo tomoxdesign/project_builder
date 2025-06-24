@@ -42,13 +42,8 @@ MAJOR.MINOR.PATCH
 
 ## Version History
 
-## [1.0.0] – 24.06.2025
-### Initial project
+## [1.0.0] – ${date}
+### Added
 - Initial project skeleton created  
 - Added: `README.md`, `LICENSE`, `requirements.txt`, and `docs/` folder
-
-
-## [1.0.1] – 24.06.2025
-### Created tpl templates for automatic generated files
-- Created: templates for `LICENSE`, `README`, `CHANGELOG`, `requirements` in cs/en and 'root' dir
 ```
