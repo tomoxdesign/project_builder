@@ -89,8 +89,7 @@ def replace_placeholders(content, context):
 # ==== funkce pro zpracovani sablon ====
 def process_templates(context):
     base_path = os.path.dirname(os.path.abspath(__file__))
-    templates_path = os.path.join(base_path, "templates")
-
+    templates_path = os.path.join(base_path, "..", "templates")
     # Cesty ke složkám v cílovém projektu
     root_dst = context["target_dir"]
     docs_cs_dst = os.path.join(root_dst, "docs", "cs")
