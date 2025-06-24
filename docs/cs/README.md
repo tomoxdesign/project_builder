@@ -1,32 +1,38 @@
 # project_builder
 
-## Popis 
+## Popis
 
-¨
+Nástroj pro rychlé vytvoření základní struktury projektů podle uživatelských vstupů.  
+Zeptá se na název projektu, autora, popis, použité technologie, typ licence a cílovou složku, poté vygeneruje složky a soubory na základě šablon.
+
 ---
 
 ## Technologie
-<!-- [link name](link url) -->
-*Zde doplňte použité technologie.*
+
+- Python 3.x  
+- Knihovny: tkinter, os, sys, shutil, datetime (standardní knihovny)  
+- Operační systém: Windows (program v aktuální verzi podporuje pouze win os)  
 
 ---
 
 ## Instalace
 
-*Zde doplňte informace pro instalaci programu.*
-
-
+1. Naklonujte nebo stáhněte repozitář.  
+2. Ujistěte se, že máte nainstalovaný Python 3+  
+3. Spusťte skript `main.py` příkazem:
 
 ---
 
 ## Použití
 
-*Zde doplňte informace pro spuštění programu.*
-
+Ve složce s projektem spustě soubor "main.py" pomocí příkazu:
+```bash
+python main.py
+```
 
 ## Konfigurace
 
-Konfigurační detaily
+Není potřeba žádná konfigurace.
 
 ---
 
