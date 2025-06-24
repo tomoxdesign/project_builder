@@ -1,5 +1,6 @@
 import os
 import sys
+import time
 from datetime import datetime
 from tkinter import filedialog, Tk
 
@@ -60,7 +61,7 @@ def get_project_info():
     target_dir = os.path.join(base_dir, project_name)
     os.makedirs(target_dir, exist_ok=True)
 
-    print(f"\n{GREEN}✅ Projeclearkt úspěšně vytvořen ve složce: {target_dir}{RESET}\n")
+    print(f"\n{GREEN}✅ Projekt úspěšně vytvořen ve složce: {target_dir}{RESET}\n")
 
     date = datetime.now().strftime("%d.%m.%Y")
     year = datetime.now().strftime("%Y")
@@ -79,6 +80,15 @@ def get_project_info():
         "list_of_packages": list_of_packages
     }
 
+# Nová funkce pro správné načtení cesty k datům i v exe
+def resource_path(relative_path):
+    """Získá absolutní cestu k resource, i když je program spuštěn jako PyInstaller exe."""
+    try:
+        base_path = sys._MEIPASS  # pokud běží jako exe, složka dočasného rozbalení
+    except AttributeError:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
 
 # ==== funkce na nahrazeni promennych v sablonach ====
 def replace_placeholders(content, context):
@@ -88,8 +98,11 @@ def replace_placeholders(content, context):
 
 # ==== funkce pro zpracovani sablon ====
 def process_templates(context):
-    base_path = os.path.dirname(os.path.abspath(__file__))
-    templates_path = os.path.join(base_path, "..", "templates")
+    # Použij resource_path pro složku templates
+    templates_path = resource_path(os.path.join("templates"))
+
+    print(f"{BLUE}[DEBUG] Templates path: {templates_path}{RESET}")
+
     # Cesty ke složkám v cílovém projektu
     root_dst = context["target_dir"]
     docs_cs_dst = os.path.join(root_dst, "docs", "cs")
@@ -103,6 +116,7 @@ def process_templates(context):
     readme_cs_file = "README.cs.tpl"
 
     files_cs = [(license_file_cs, "LICENSE"), (readme_cs_file, "README.md")]
+    print(f"{BLUE}[DEBUG] Zpracovávám CS šablony v: {cs_tpl_path}{RESET}")
 
     for tpl_name, output_name in files_cs:
         tpl_path = os.path.join(cs_tpl_path, tpl_name)
@@ -157,3 +171,5 @@ if __name__ == "__main__":
     context = get_project_info()
     process_templates(context)
     print(f"\n{GREEN}✅ Projekt úspěšně vytvořen ve složce: {context['target_dir']}{RESET}")
+    time.sleep(30)
+    input(f"\n{BLUE}Stiskni Enter pro ukončení...{RESET}")
